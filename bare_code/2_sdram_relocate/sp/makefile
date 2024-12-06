@@ -4,10 +4,10 @@ led.bin:start.o led.o
 	arm-linux-objdump -D led.elf > led_eld.dis
 
 %.o : %.S
-	arm-linux-gcc -o $@ $< -c
+	arm-linux-gcc -o $@ $< -c -nostdlib
 
 %.o : %.c
-	arm-linux-gcc -o $@ $< -c
+	arm-linux-gcc -o $@ $< -c -nostdlib
 
 .PHONY:clean
 clean:

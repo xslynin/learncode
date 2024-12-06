@@ -8,4 +8,6 @@ _start:
 	str r0, [r1]
 
 	ldr sp, =0xD0037D80			//set svc stack and then we could use C progam, and set the high address in svc stack image for down growing stack
-
+	bl led_blink
+// Couldn't lack the dead loop
+	b .
