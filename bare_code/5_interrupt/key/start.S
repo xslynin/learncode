@@ -7,6 +7,8 @@ _start:
 	ldr r1, =0xE2700000
 	str r0, [r1]
 
+	bl clock_init
+
 	ldr sp, =0xD0037D80			//set svc stack and then we could use C progam, and set the high address in svc stack image for down growing stack
 
 	mrc p15, 0, r0, c1, c0, 0	//coprocesser
@@ -14,8 +16,6 @@ _start:
 	orr r0, r0, #(1<<12)		//	   |		turn on
 	mcr p15, 0, r0, c1, c0, 0
 
-	bl clock_init
-
-	bl led_blink
+	bl main
 // Couldn't lack the dead loop
 	b .
