@@ -183,11 +183,22 @@
 
 
 void sys_interrupt_init(void);
-
+void clear_vic_addr(void);
 void interrupt_enable(unsigned long inum);
 void interrupt_disable(unsigned long inum);
 void interrupt_bind_isr2vectoraddr(unsigned long inum, void (*handler)(void));
-
+unsigned long intc_getvicirqstatus(unsigned long ucontroller);
 void none_use_function(void);
 void irq_handler(void);
+//void IRQ_handle(void);
+// void intc_init(void);
+// void intc_enable(unsigned long intnum);
+// void intc_disable(unsigned long intnum);
+// void intc_setvectaddr(unsigned long intnum, void (*handler)(void));
+// void intc_clearvectaddr(void);
+// unsigned long intc_getvicirqstatus(unsigned long ucontroller);
+// void irq_handler(void);
+// void IRQ_handle(void);
+// void system_init_exception(void);
+
 #endif
