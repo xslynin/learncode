@@ -1,0 +1,11 @@
+macro which is used commonly
+
+MODULE_LICENSE
+	license like gpl
+
+MODULE_AUTHOR
+MODULE_DESCRIPTION
+	some introduction
+
+MODULE_ALIAS
+	nickname of module

@@ -1,0 +1,38 @@
+some critical dangrous in my code, 
+
+when you succeed to apply the major number and minor
+	now if your register of device fail but the number is still available
+		but you just retur the error withour the handler for above situation
+			just every goes damn
+
+now think another situation
+
+when you succeed to apply the major number and minor's,
+the register of device surely done,
+	everything goes well but, how about your fair operation in init function fail?
+		like, the dynamic address map fail, 
+			so you should do something for a fairly end!
+
+when you go in the 1234, out for the 4321 plz
+
+the nice handle is : goto  some fair funciton, like :
+
+flag4:
+	do something 
+
+flag3:
+	...
+
+flag2:
+
+flag1:
+	...
+	return -xxx
+flag0:
+	return 0
+
+
+high number don't need to return, cause it should finish previous "end operation"
+one level by one level
+
+so called reflection
